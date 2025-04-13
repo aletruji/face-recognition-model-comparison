@@ -29,3 +29,7 @@ class LBPHModel:
 
     def get_label(self, label_id):
         return self.label_map.get(label_id, "Unknown")
+
+    def save_model(self, path):
+        self.model.save(path)
+

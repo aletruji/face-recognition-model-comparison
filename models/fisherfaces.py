@@ -2,9 +2,9 @@ import os
 import cv2
 import numpy as np
 
-class EigenfacesModel:
+class FisherfacesModel:
     def __init__(self):
-        self.model = cv2.face.EigenFaceRecognizer_create()
+        self.model = cv2.face.FisherFaceRecognizer_create()
 
     def train(self, X_train, y_train):
         self.model.train(X_train, np.array(y_train))
@@ -43,7 +43,6 @@ class EigenfacesModel:
                 if img is None:
                     continue
 
-                # Größe auf festen Wert skalieren
                 img_resized = cv2.resize(img, (100, 100))
                 X.append(img_resized)
                 y.append(label)

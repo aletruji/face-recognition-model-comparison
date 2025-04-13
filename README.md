@@ -10,4 +10,6 @@ The goal is to evaluate all six models under identical conditions using a unifie
 The aim is to build a modular comparison framework that applies each model to the same face recognition tasks.
 The performance of each model is measured using classification metrics such as accuracy, precision, recall, F1-score, and inference time.
 The results provide a foundation for analysis in a bachelor’s thesis.
+
+
 """
