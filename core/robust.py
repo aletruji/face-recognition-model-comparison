@@ -3,16 +3,20 @@ import cv2
 from sklearn.metrics import accuracy_score, f1_score
 
 # Störung 1: Gaussian Noise
-def add_noise(img):
-    noise = np.random.normal(0, 25, img.shape).astype(np.uint8)
-    return cv2.add(img, noise)
+def add_noise(img, std_dev=55):
+    noise = np.random.normal(0, std_dev, img.shape).astype(np.int16)
+    img_int = img.astype(np.int16)
+
+    # Add noise and clip to 0–255
+    noisy_img = np.clip(img_int + noise, 0, 255).astype(np.uint8)
+    return noisy_img
 
 # Störung 2: Blur
 def add_blur(img):
-    return cv2.GaussianBlur(img, (5, 5), 0)
+    return cv2.GaussianBlur(img, (9, 9), 0)
 
 # Störung 3: Abdunkeln
-def darken(img, factor=0.7):
+def darken(img, factor=0.5):
     return cv2.convertScaleAbs(img, alpha=factor, beta=0)
 
 # Störung anwenden auf Bildarray
