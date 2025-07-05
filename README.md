@@ -2,7 +2,7 @@
 ## Comparison of Classical and Modern Machine Learning Models for Face Recognition
 
 This project implements and compares classical face recognition methods (Eigenfaces, Fisherfaces, LBPH)
-with modern deep learning models (FaceNet, ArcFace, Dlib-ResNet).
+with modern deep learning models (FaceNet, ArcFace, Dlib_Face_Recognition_Model).
 The goal is to evaluate all six models under identical conditions using a unified dataset and standardized evaluation metrics.
 
 ## Objective

@@ -8,7 +8,7 @@ def hauptmenue():
         print("1 = LBPH")
         print("2 = Eigenfaces")
         print("3 = Fisherfaces")
-        print("4 = Dlib-ResNet")
+        print("4 = Dlib-Face-Recognition-Model")
         print("5 = FaceNet")
         print("6 = ArcFace")
         print("q = Beenden")

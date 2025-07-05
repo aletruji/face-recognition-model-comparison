@@ -59,6 +59,5 @@ class DlibResNetModel:
         return self.label_map.get(label_id, "Unknown")
 
     def save_model(self, path):
-        # Dlib-Modell selbst ist pretrained und unveränderlich → kein Speichern nötig
-        # Falls du Trainingsdaten (Embeddings + Labels) speichern willst, kannst du das hier ergänzen
+
         pass
